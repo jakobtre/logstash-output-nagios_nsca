@@ -4,7 +4,7 @@ require_relative "../spec_helper"
 describe LogStash::Outputs::NagiosNsca do
 
   it "should register without errors" do
-    plugin = LogStash::Plugin.lookup("output", "nagios_nsca").new({"nagios_status" => "1"})
+    plugin = LogStash::Plugin.lookup("output", "nagios_nsca_fix").new({"nagios_status" => "1"})
     expect { plugin.register }.to_not raise_error
   end
 
