@@ -66,7 +66,7 @@ class LogStash::Outputs::NagiosNsca < LogStash::Outputs::Base
   def receive(event)
     # exit if type or tags don't match
     # catch logstash shutdown
-    return if event == LogStash::SHUTDOWN
+#    return if event == LogStash::SHUTDOWN
 
     # skip if 'send_nsca' binary doesn't exist
     if !command_file_exist?
